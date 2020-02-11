@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Ejercicio Dom, Evnetos y Funcioens</title>
+        <script type="text/javascript" src="js/32-ejercicioDom.js"></script>
+        <style>
+            .box{
+                width: 250px;
+                height: 250px;
+                float: lef;
+                margin: 20px;
+            }
+            .dashed{
+                border: 3px dashed black;
+                padding: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--  
+            1. Formulario con los campos: Nombre, Apllidos y edad
+            2. Debemos tener un boton de enviar el formulario
+            3. Mostrar los datos por pantalla
+            4. Tener un boton que al darle click nos muestra los datos
+            actuales del formulario
+
+        -->
+        <h1>Ejercicio Dom, Enventos y Funcioens - Curso JS</h1>
+        <div>
+            <form action="#" method="POST" id="formulario" onsubmit="return false">
+                <label for="nombre"> Nombre:</label>
+                <br/>
+                <input type="text" name="nombre" id="nombre"/>
+                <br/>
+                <span id="error_nombre"></span>
+                <br/>
+
+                <label for="apellidos">Apellidos:</label>
+                <br/>
+                <input type="text" name="apellidos" id="apellido"/>
+                <br/>
+                <span id="error_apellidos"></span>
+                <br/>
+
+                <label for="edad">Edad: </label>
+                <br/>
+                <input type="number" name="edad" id="edad" />
+                <br/>
+                <span id="error_edad"></span>
+                <br/>
+
+                <input type="submit" value="Enviar" id="submit" />
+
+            </form>
+        </div>
+        <div class="box dashed">
+            <h3>Información del Usuario</h3>
+            <hr>
+            <p id="pNombre">
+                Nombre: <span></span>
+            </p>
+            <p id="pApellido">
+                Apellidos: <span></span>
+            </p>
+            <p id="pEdad">
+                Edad: <span></span>
+            </p>
+
+        </div>
+    </body>
+</html>
