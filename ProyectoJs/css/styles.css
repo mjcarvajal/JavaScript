@@ -67,9 +67,10 @@
     padding: 7px;
 }
 
-.post h2{
+h2{
     font-size: 30px;
     color: #333;
+    font-family: Helvetica, Arial;
 }
 
 .post .date{
@@ -129,7 +130,9 @@
 
 form input[type="text"],
 form input[type="password"],
-form input[type="email"]{
+form input[type="number"],
+form input[type="email"],
+select{
     padding: 5px;
     border-radius: 2px;
     border: 1px solid #ccc;
@@ -196,4 +199,33 @@ footer{
     text-decoration: none;
     display: block;
     float: right;
+}
+
+#box{
+    width: 60%;
+    float: left;
+    margin-top: 40px;
+}
+
+#reloj{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Helvetica, Arial;
+    border: 5px dashed #333;
+    color: #333;
+    width: 30%;
+    padding: 30px;
+    margin: 0px auto;
+}
+
+#form_contact{
+    width: 50%;
+    margin-top: 15px;
+    font-family: Helvetica, Arial;
+}
+
+#form_contact label{
+    width: 100%;
+    display: block;
+    margin-top: 5px;
 }
