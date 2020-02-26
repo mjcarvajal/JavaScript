@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="js/jquery-ui-1.12.1//jquery-ui.theme.css" />
         <script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
        
+        <!-- Plugin Valiadtion-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
         <!-- Mis Scripts-->
         <script type="text/javascript" src="js/main.js"></script>
     </head>
@@ -38,7 +40,7 @@
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="reloj.html">Reloj</a></li>
                         <li><a href="about.html">Sobr Mi</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
                     </ul>
                 </nav>
             </header>
@@ -51,25 +53,25 @@
                     <h2>Contacto</h2>
                     <form action="" method="POST" id="form_contact">
                         <label for="name">Nombre</label>
-                        <input type="text" name="name"/>
+                        <input type="text" name="name" data-validation="alphanumeric"/>
 
                         <label  for="surname">Apellidos</label>
-                        <input type="text" name="surname"/>
+                        <input type="text" name="surname" data-validation="alphanumeric"/>
 
                         <label for="email">Email</label>
-                        <input type="email" name="email"/>
+                        <input type="email" name="email" data-validation="email"/>
 
                         <label for="sex">Sexo</label>
-                        <select name="sex">
+                        <select name="sex" data-validation="required">
                             <option value="men">Hombre</option>
                             <option value="women">Mujer</option>
                         </select>                       
 
                         <label for="date">Fecha de Nacimiento</label>
-                        <input type="text" name="date"/>
+                        <input type="text" name="date" data-validation="date" data-validation-format="dd/mm/yyyy"/>
                         
                         <label for="years">Edad</label>
-                        <input type="number" name="years"/>
+                        <input type="number" name="years" data-validation="number"/>
 
                         <input type="submit" value="Enviar"/>
                     </form>
